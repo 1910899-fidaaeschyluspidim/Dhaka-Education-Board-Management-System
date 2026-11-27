@@ -8,4 +8,14 @@ public class Alerts {
         a.setContentText(s);
         a.showAndWait();
     }
+
+    public static void infoAlert(String s){
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText(s);
+        a.showAndWait();
+
+    }
 }
+
+
+

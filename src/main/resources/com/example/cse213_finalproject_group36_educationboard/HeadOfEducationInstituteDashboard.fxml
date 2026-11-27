@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="462.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse213_finalproject_group36_educationboard.Tashneem_2430962.HeadOfEducationInstituteDashboardController">
+   <children>
+      <Label layoutX="148.0" layoutY="20.0" text="Head of Education Institute dashboard">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="202.0" layoutY="56.0" mnemonicParsing="false" onAction="#addStudentRegistrationDataButtonOA" text="add student registration data" />
+      <Button layoutX="170.0" layoutY="99.0" mnemonicParsing="false" onAction="#viewStudentAndTheirSubmissionStatusButtonOA" text="view student and their submission status" />
+      <Button layoutX="190.0" layoutY="142.0" mnemonicParsing="false" onAction="#submitCenterAllocationRequestsButtonOA" text="submit center allocation requests" />
+      <Button layoutX="142.0" layoutY="189.0" mnemonicParsing="false" onAction="#approveOrRejectTranscriptAndCertificateRequestsButtonOA" text="approve or reject transcript and certificate requests" />
+      <Button layoutX="213.0" layoutY="233.0" mnemonicParsing="false" onAction="#enterMarksForAStudentButtonOA" text="enter marks for a student" />
+      <Button layoutX="208.0" layoutY="273.0" mnemonicParsing="false" onAction="#recordStudentAttendanceButtonOA" text="record student attendance" />
+      <Button layoutX="213.0" layoutY="317.0" mnemonicParsing="false" onAction="#postANoticeToStudentsButtonOA" text="post a notice to students" />
+      <Button layoutX="251.0" layoutY="393.0" mnemonicParsing="false" onAction="#signOutButtonOA" text="sign out" />
+   </children>
+</AnchorPane>

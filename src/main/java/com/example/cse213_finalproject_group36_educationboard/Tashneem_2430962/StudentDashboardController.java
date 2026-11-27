@@ -1,4 +1,4 @@
-package com.example.cse213_finalproject_group36_educationboard;
+package com.example.cse213_finalproject_group36_educationboard.Tashneem_2430962;
 
 import javafx.event.ActionEvent;
 
@@ -6,7 +6,6 @@ public class StudentDashboardController
 {
     @javafx.fxml.FXML
     public void initialize() {
-
     }
 
     @javafx.fxml.FXML
