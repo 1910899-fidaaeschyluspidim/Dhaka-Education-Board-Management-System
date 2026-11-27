@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="527.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse213_finalproject_group36_educationboard.StudentDashboardController">
+   <children>
+      <Label layoutX="196.0" prefHeight="55.0" prefWidth="186.0" text="               Student Dashboard" />
+      <Button layoutX="205.0" layoutY="61.0" mnemonicParsing="false" onAction="#submitRegistrationAndFormButtonOA" text="submit registration and form" />
+      <Button layoutX="238.0" layoutY="101.0" mnemonicParsing="false" onAction="#viewAdmitCardButtonOA" text="view admit card" />
+      <Button layoutX="198.0" layoutY="140.0" mnemonicParsing="false" onAction="#requestTranscriptOrCertificateButtonOA" text="request transcript or certificate" />
+      <Button layoutX="227.0" layoutY="182.0" mnemonicParsing="false" onAction="#viewMyRegistrationButtonOA" text="view my registration" />
+      <Button layoutX="240.0" layoutY="222.0" mnemonicParsing="false" onAction="#viewMyMarksButtonOA" text="view my marks" />
+      <Button layoutX="147.0" layoutY="265.0" mnemonicParsing="false" onAction="#viewStatusOfMyTranscriptOrCertificateRequestButtobOA" text="view status of my transcript or certificate requests" />
+      <Button layoutX="247.0" layoutY="309.0" mnemonicParsing="false" onAction="#viewNoticeButtonOA" text="view notices" />
+      <Button layoutX="151.0" layoutY="349.0" mnemonicParsing="false" onAction="#submitAQueryOrLodgeAComplaintToTheBoardButtonOA" text="submit a query or lodge a complaint to the board" />
+      <Button layoutX="259.0" layoutY="420.0" mnemonicParsing="false" onAction="#signOutButtonOA" text="sign out" />
+   </children>
+</AnchorPane>
