@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse213_finalproject_group36_educationboard.Tashneem_2430962.SubmitComplaintToTheBoard">
+   <children>
+      <TextField fx:id="messageIDTF" layoutX="109.0" layoutY="52.0" />
+      <TextField fx:id="senderIDTF" layoutX="100.0" layoutY="109.0" />
+      <ComboBox fx:id="categoryComboB" layoutX="370.0" layoutY="52.0" prefWidth="150.0" promptText="category" />
+      <TextArea fx:id="queryTextArea" layoutX="345.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" text="Write your query below.." />
+      <Label layoutX="35.0" layoutY="56.0" text="message ID: " />
+      <Label layoutX="35.0" layoutY="114.0" text="sender ID: " />
+      <Label fx:id="statusLabel" layoutX="355.0" layoutY="326.0" prefHeight="60.0" prefWidth="180.0" />
+      <Button layoutX="161.0" layoutY="165.0" mnemonicParsing="false" onAction="#submitButtonOA" text="Submit" />
+      <Button layoutX="65.0" layoutY="290.0" mnemonicParsing="false" onAction="#writeObjectToBinaryFileButtonOA" text="Write message object to binary file" />
+   </children>
+</AnchorPane>
