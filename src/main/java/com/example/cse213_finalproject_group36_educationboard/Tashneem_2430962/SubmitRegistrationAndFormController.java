@@ -7,12 +7,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
-public class SubmitRegistrationAndFormController
-{
+public class SubmitRegistrationAndFormController {
     @javafx.fxml.FXML
     private TextField nameTF;
     @javafx.fxml.FXML
@@ -37,31 +34,35 @@ public class SubmitRegistrationAndFormController
     @javafx.fxml.FXML
     public void submitButtonOA(ActionEvent actionEvent) {
 
-        if(studentIDTF.getText().isEmpty()){
+        if (studentIDTF.getText().length() != 7) {
             Alerts.errorAlert("please give valid 7-digit student ID");
             return;
         }
-        if(nameTF.getText().isEmpty()){
+        if (nameTF.getText().isEmpty()) {
             Alerts.errorAlert("please give student name");
             return;
         }
-        if(rollNoTF.getText().isEmpty()){
+        if (rollNoTF.getText().isEmpty()) {
             Alerts.errorAlert("please give your roll number");
             return;
         }
-        if(registrationNoTF.getText().isEmpty()){
+        if (registrationNoTF.getText().isEmpty()) {
             Alerts.errorAlert("please give registration number");
             return;
         }
-        if(subjectsComboB.getValue() == null){
+        if (subjectsComboB.getValue() == null) {
             Alerts.errorAlert("please select a subject");
             return;
         }
-        if(examTypeComboB.getValue() == null){
+        if (examTypeComboB.getValue() == null) {
             Alerts.errorAlert("please select the exam type");
             return;
         }
+        statusTextArea.setText("Submitted!");
+    }
 
+    @javafx.fxml.FXML
+    public void createRegistrationObjectButtonOA(ActionEvent actionEvent) throws IOException {
         Registration r = new Registration(
                 registrationNoTF.getText(),
                 studentIDTF.getText(),
@@ -70,29 +71,26 @@ public class SubmitRegistrationAndFormController
                 examTypeComboB.getValue(),
                 subjectsComboB.getValue(),
                 statusTextArea.getText()
+
         );
 
-        File f = new File("Registration.bin");
+        File f;
         FileOutputStream fos;
         ObjectOutputStream oos;
 
-        try {
-            if (f.exists()){
-                fos = new FileOutputStream(f, true);
-                oos = new AppendableObjectOutputStream(fos);
-            }else {
-                fos = new FileOutputStream(f);
-                oos = new ObjectOutputStream(fos);
-            }
-            oos.writeObject(r);
-            oos.close();
-            fos.close();
+        f = new File("Registration.bin");
 
-            statusTextArea.setText("Submitted!");
-        }
-        catch (Exception e) {
-            e.printStackTrace();
+        if(f.exists()){
+            fos = new FileOutputStream(f, true);
+            oos = new AppendableObjectOutputStream(fos);
+        }else {
+            fos = new FileOutputStream(f);
+            oos = new ObjectOutputStream(fos);
         }
 
+        oos.writeObject(r);
     }
+
+
 }
+
