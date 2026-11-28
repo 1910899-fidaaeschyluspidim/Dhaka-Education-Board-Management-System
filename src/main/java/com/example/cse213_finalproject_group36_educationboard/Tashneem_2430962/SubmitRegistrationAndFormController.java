@@ -38,24 +38,8 @@ public class SubmitRegistrationAndFormController {
             Alerts.errorAlert("please give valid 7-digit student ID");
             return;
         }
-        if (nameTF.getText().isEmpty()) {
-            Alerts.errorAlert("please give student name");
-            return;
-        }
-        if (rollNoTF.getText().isEmpty()) {
-            Alerts.errorAlert("please give your roll number");
-            return;
-        }
-        if (registrationNoTF.getText().isEmpty()) {
-            Alerts.errorAlert("please give registration number");
-            return;
-        }
-        if (subjectsComboB.getValue() == null) {
-            Alerts.errorAlert("please select a subject");
-            return;
-        }
-        if (examTypeComboB.getValue() == null) {
-            Alerts.errorAlert("please select the exam type");
+        if (nameTF.getText().isEmpty() || rollNoTF.getText().isEmpty() || registrationNoTF.getText().isEmpty() || subjectsComboB.getValue() == null || examTypeComboB.getValue() == null) {
+            Alerts.errorAlert("please fill up all the fields");
             return;
         }
         statusTextArea.setText("Submitted!");
